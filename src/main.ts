@@ -3,10 +3,10 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
-  // FIXME
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const app = await NestFactory.createApplicationContext(AppModule);
+  const app = await NestFactory.create(AppModule);
 
   // TODO Use app
+
+  await app.listen(3000);
 }
 bootstrap();
